@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #222;
+}
+
+.game {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.instructions {
+  line-height: 1.5;
+  color: #555;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.tile {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 8px;
+  background: #2864dc;
+  color: white;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tile:focus-visible,
+#new-game:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+.tile:hover {
+  background: #1d50b5;
+}
+
+.tile.empty {
+  background: #dce2ec;
+  cursor: default;
+}
+
+#new-game {
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 22px;
+  background: #222;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#new-game:hover {
+  background: #444;
+}
+
+.message {
+  min-height: 24px;
+  font-weight: bold;
+  color: #18733b;
+}
+
+.moves {
+  color: #555;
+}
+
+@media (max-width: 360px) {
+  .board {
+    gap: 5px;
+  }
+}

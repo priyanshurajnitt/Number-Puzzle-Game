@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Puzzle Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <h1>Number Puzzle</h1>
+    <p class="instructions">Arrange the numbers from 1 to 15. Tap a tile next to the empty space to move it.</p>
+
+    <div id="board" class="board" aria-label="Number puzzle board"></div>
+
+    <button id="new-game" type="button">New Game</button>
+    <p id="message" class="message" aria-live="polite">Good luck!</p>
+    <p id="moves" class="moves">Moves: 0</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
